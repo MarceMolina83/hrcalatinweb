@@ -64,6 +64,9 @@ export default {
                     foreground: "hsl(var(--card-foreground))",
                 },
             },
+            boxShadow: {
+                elegant: "0 8px 30px rgb(0 0 0 / 0.06)",
+            },
             borderRadius: {
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
