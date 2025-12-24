@@ -25,10 +25,41 @@ if (!SUPABASE_PUBLISHABLE_KEY) {
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+const isValidConfig = SUPABASE_URL && SUPABASE_PUBLISHABLE_KEY;
+
+// Temporary mock for testing when env vars are missing
+const mockSupabase = {
+  from: () => ({
+    select: () => ({
+      eq: () => ({
+        single: () => Promise.resolve({ data: null, error: null }),
+        maybeSingle: () => Promise.resolve({ data: null, error: null }),
+      }),
+      order: () => Promise.resolve({ data: [], error: null }),
+    }),
+    insert: () => Promise.resolve({ data: null, error: null }),
+    upload: () => Promise.resolve({ data: null, error: null }),
+  }),
+  storage: {
+    from: () => ({
+      upload: () => Promise.resolve({ data: null, error: null }),
+      getPublicUrl: () => ({ data: { publicUrl: "" } }),
+    }),
+  },
   auth: {
-    storage: localStorage,
-    persistSession: true,
-    autoRefreshToken: true,
-  }
-});
+    onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => { } } } }),
+    getSession: () => Promise.resolve({ data: { session: null }, error: null }),
+    signInWithPassword: () => Promise.resolve({ data: { user: null, session: null }, error: null }),
+    signOut: () => Promise.resolve({ error: null }),
+  },
+} as unknown as ReturnType<typeof createClient<Database>>;
+
+export const supabase = isValidConfig
+  ? createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+    auth: {
+      storage: localStorage,
+      persistSession: true,
+      autoRefreshToken: true,
+    }
+  })
+  : mockSupabase;
