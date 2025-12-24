@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { FileText, Search, BookOpen, Rocket, Award, MapPin, Briefcase, GraduationCap } from "lucide-react";
+import { FileText, Award, Briefcase } from "lucide-react";
 import candidatesImage from "@/assets/candidates-section.jpg";
 import logo from "@/assets/logo.jpeg";
 import CandidateApplicationForm from "@/components/CandidateApplicationForm";
@@ -11,14 +11,14 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Candidates = () => {
   const { t } = useLanguage();
-  
+
   return (
     <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-20 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${candidatesImage})` }}
         ></div>
