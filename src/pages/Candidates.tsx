@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { FileText, Award, Briefcase } from "lucide-react";
+import { FileText, Award, Briefcase, MapPin } from "lucide-react";
 import candidatesImage from "@/assets/candidates-section.jpg";
 import logo from "@/assets/logo.jpeg";
 import CandidateApplicationForm from "@/components/CandidateApplicationForm";
@@ -108,76 +108,49 @@ const Candidates = () => {
               {t("candidates.training.subtitle")}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Card className="border-2 border-gold/30 hover:border-gold hover:shadow-elegant transition-smooth group">
-              <CardContent className="pt-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <Card className="border-2 border-gold/30 hover:border-gold hover:shadow-elegant transition-smooth group flex flex-col h-full">
+              <CardContent className="pt-6 text-center flex-grow flex flex-col">
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
                   <span className="text-3xl">💬</span>
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gold">{t("candidates.training.language.title")}</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-sm mb-6 flex-grow">
                   {t("candidates.training.language.description")}
                 </p>
+                <Button variant="outline" className="w-full mt-auto text-gold border-gold/50 hover:bg-gold hover:text-white">
+                  {t("candidates.training.button")}
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-accent/30 hover:border-accent hover:shadow-elegant transition-smooth group">
-              <CardContent className="pt-6 text-center">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
-                  <span className="text-3xl">🎯</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-accent">{t("candidates.training.technical.title")}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t("candidates.training.technical.description")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-primary/30 hover:border-primary hover:shadow-elegant transition-smooth group">
-              <CardContent className="pt-6 text-center">
+            <Card className="border-2 border-primary/30 hover:border-primary hover:shadow-elegant transition-smooth group flex flex-col h-full">
+              <CardContent className="pt-6 text-center flex-grow flex flex-col">
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
-                  <span className="text-3xl">🌎</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-primary">{t("candidates.training.cultural.title")}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t("candidates.training.cultural.description")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-gold/30 hover:border-gold hover:shadow-elegant transition-smooth group">
-              <CardContent className="pt-6 text-center">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
                   <span className="text-3xl">📄</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-gold">{t("candidates.training.resume.title")}</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="text-xl font-bold mb-2 text-primary">{t("candidates.training.resume.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-6 flex-grow">
                   {t("candidates.training.resume.description")}
                 </p>
+                <Button variant="outline" className="w-full mt-auto text-primary border-primary/50 hover:bg-primary hover:text-white">
+                  {t("candidates.training.button")}
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-accent/30 hover:border-accent hover:shadow-elegant transition-smooth group">
-              <CardContent className="pt-6 text-center">
+            <Card className="border-2 border-accent/30 hover:border-accent hover:shadow-elegant transition-smooth group flex flex-col h-full">
+              <CardContent className="pt-6 text-center flex-grow flex flex-col">
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
-                  <span className="text-3xl">💼</span>
+                  <MapPin className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-accent">{t("candidates.training.interview.title")}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t("candidates.training.interview.description")}
+                <h3 className="text-xl font-bold mb-2 text-accent">{t("candidates.training.arrival.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                  {t("candidates.training.arrival.description")}
                 </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-primary/30 hover:border-primary hover:shadow-elegant transition-smooth group">
-              <CardContent className="pt-6 text-center">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
-                  <span className="text-3xl">🤝</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-primary">{t("candidates.training.network.title")}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {t("candidates.training.network.description")}
-                </p>
+                <Button variant="outline" className="w-full mt-auto text-accent border-accent/50 hover:bg-accent hover:text-white">
+                  {t("candidates.training.button")}
+                </Button>
               </CardContent>
             </Card>
           </div>

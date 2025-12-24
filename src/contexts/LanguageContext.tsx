@@ -18,18 +18,18 @@ export const translations = {
     "nav.candidates": "For Candidates",
     "nav.contact": "Contact Us",
     "nav.getStarted": "Get Started",
-    
+
     // Home Page
     "home.hero.title1": "Connecting Talent,",
     "home.hero.title2": "Building Futures",
     "home.hero.subtitle": "Bridge the gap between Latin American professionals and Canadian opportunities with HR-CALATIN Interexchange",
     "home.hero.employers": "For Employers",
     "home.hero.candidates": "For Candidates",
-    
+
     "home.mission.title": "Our",
     "home.mission.titleHighlight": "Mission",
     "home.mission.description": "We connect the best talent from Latin America with Canadian companies. We facilitate labor integration by creating real growth opportunities for professionals and visionary employers.",
-    
+
     "home.why.title": "Why Choose",
     "home.why.titleHighlight": "HR-CALATIN",
     "home.why.subtitle": "Connections that Work",
@@ -39,21 +39,21 @@ export const translations = {
     "home.why.quality.description": "Rigorous validation. Companies receive high-level profiles and candidates access serious and reliable offers. No time wasted.",
     "home.why.support.title": "Successful Integration",
     "home.why.support.description": "Total accompaniment. We facilitate the professional's arrival and adaptation, ensuring peace of mind for the employer and confidence for the new talent.",
-    
+
     "home.portal.employers.title": "For Employers",
     "home.portal.employers.description": "Access a curated pool of qualified Latin American professionals ready to contribute to your Canadian business success.",
     "home.portal.employers.item1": "Personalized talent search and matching",
     "home.portal.employers.item2": "Comprehensive skills assessments",
     "home.portal.employers.item3": "Integration and onboarding support",
     "home.portal.employers.button": "Explore Employer Portal",
-    
+
     "home.portal.candidates.title": "For Candidates",
     "home.portal.candidates.description": "Launch your Canadian career with expert guidance, resources, and access to top employers seeking your talents.",
     "home.portal.candidates.item1": "Professional resume building tools",
     "home.portal.candidates.item2": "Job search and application tracking",
     "home.portal.candidates.item3": "Cultural integration resources",
     "home.portal.candidates.button": "Explore Candidate Portal",
-    
+
     "home.pathways.title": "Legal Pathways",
     "home.pathways.titleHighlight": " to Canada",
     "home.pathways.subtitle": "At HR-CALATIN we are the bridge between Latin America's professional excellence and Canadian companies' vision. We create the perfect match: talent ready to add immediate value and career opportunities that transform lives.",
@@ -69,18 +69,18 @@ export const translations = {
     "home.pathways.fta.educationDesc": "",
     "home.pathways.sawp.title": "Agricultural Sector (SAWP)",
     "home.pathways.sawp.description": "We cover your harvest seasons with experienced workers from Mexico and the Caribbean. We guarantee reliable and legal workforce for the Canadian field.",
-    
+
     "home.stats.placements": "Successful Placements",
     "home.stats.companies": "Partner Companies",
     "home.stats.satisfaction": "Satisfaction Rate",
     "home.stats.experience": "Years Experience",
-    
+
     // Candidates Page
     "candidates.hero.title1": "Your Canadian",
     "candidates.hero.title2": "Career Starts Here",
     "candidates.hero.subtitle": "Transform your professional dreams into reality with expert guidance and access to top Canadian employers",
     "candidates.hero.button": "Create Your Profile Today",
-    
+
     "candidates.why.title": "Your Ally to Succeed in Canada",
     "candidates.why.subtitle": "We are not just a job board. We are your safe bridge to a successful international career.",
     "candidates.why.jobs.title": "Verified Opportunities",
@@ -97,23 +97,18 @@ export const translations = {
     "candidates.why.coaching.description": "Don't apply blindly. Receive expert mentorship and interview simulations to turn opportunities into job offers.",
     "candidates.why.legal.title": "Legal Permanence Plan",
     "candidates.why.legal.description": "We don't just bring you here, we help you build your future. We design with you a clear roadmap to transition from your temporary permit to permanent residence.",
-    
+
     "candidates.training.title": "Training &",
     "candidates.training.titleHighlight": "Integration Support",
     "candidates.training.subtitle": "We prepare professionals for success in Canada with comprehensive training and integration programs",
     "candidates.training.language.title": "Language Training",
-    "candidates.training.language.description": "Intensive English and French courses for effective communication",
-    "candidates.training.technical.title": "Technical Skills",
-    "candidates.training.technical.description": "Specialized training aligned with Canadian market standards",
-    "candidates.training.cultural.title": "Cultural Adaptation",
-    "candidates.training.cultural.description": "Workshops on Canadian workplace culture to ease your transition",
-    "candidates.training.resume.title": "Resume Building",
-    "candidates.training.resume.description": "Expert help adapting your resume to Canadian standards",
-    "candidates.training.interview.title": "Interview Prep",
-    "candidates.training.interview.description": "Mock interviews and tips for Canadian job interviews",
-    "candidates.training.network.title": "Support Network",
-    "candidates.training.network.description": "Community of professionals to share experiences and advice",
-    
+    "candidates.training.language.description": "Intensive English and French courses designed to achieve effective communication in the Canadian professional environment",
+    "candidates.training.resume.title": "Resume Creation",
+    "candidates.training.resume.description": "Expert advice to adapt your professional profile and CV to the standards and formats required by Canadian recruiters",
+    "candidates.training.arrival.title": "First Steps in Canada",
+    "candidates.training.arrival.description": "We support you with initial procedures: phone line, bank account opening, and other essentials for your new life",
+    "candidates.training.button": "Learn More",
+
     "candidates.path.title": "Your Path to Success",
     "candidates.path.subtitle": "Four simple steps to launch your Canadian career",
     "candidates.path.step1.title": "Register",
@@ -124,7 +119,7 @@ export const translations = {
     "candidates.path.step3.description": "Browse opportunities and apply to positions matching your skills",
     "candidates.path.step4.title": "Launch Career",
     "candidates.path.step4.description": "Get hired and receive ongoing support during your transition",
-    
+
     "candidates.tools.title": "Powerful Tools for Your Success",
     "candidates.tools.subtitle": "Everything you need to stand out and succeed",
     "candidates.tools.resume.title": "Smart Resume Builder",
@@ -135,10 +130,10 @@ export const translations = {
     "candidates.tools.learning.description": "Comprehensive guides on Canadian workplace culture, interview tips, and career development",
     "candidates.tools.acceleration.title": "Career Acceleration Program",
     "candidates.tools.acceleration.description": "Exclusive access to mentorship, networking events, and professional development workshops",
-    
+
     "candidates.apply.title": "Apply Now!",
     "candidates.apply.subtitle": "Take the first step towards your Canadian career. Fill out our application form and our team will contact you.",
-    
+
     "candidates.cta.title": "Contact Us",
     "candidates.cta.subtitle": "Have questions about our programs or services? We're here to help you every step of the way.",
     "candidates.cta.button": "Get in Touch",
@@ -194,7 +189,7 @@ export const translations = {
     "employers.hero.title2": "Top Performer",
     "employers.hero.subtitle": "Access pre-qualified Latin American professionals ready to drive your business forward",
     "employers.hero.button": "Post Your First Job Opening",
-    
+
     "employers.why.title": "International Talent Solutions",
     "employers.why.subtitle": "We eliminate cross-border hiring barriers so you can focus on growing.",
     "employers.why.talent.title": "Validated Talent",
@@ -209,7 +204,7 @@ export const translations = {
     "employers.why.cost.description": "Optimize your budget. Lower hiring costs and faster response times than traditional recruitment.",
     "employers.why.partnership.title": "Backup and Guarantee",
     "employers.why.partnership.description": "Your investment is protected. We offer continuous support and a replacement guarantee at no cost if the candidate leaves or does not meet expectations within the agreed period (30-90 days).",
-    
+
     "employers.services.title": "Our Employer Services",
     "employers.services.subtitle": "Comprehensive talent solutions designed for the Canadian business.",
     "employers.services.search.title": "Custom Talent Search",
@@ -220,7 +215,7 @@ export const translations = {
     "employers.services.training.description": "We train talent in the specific job functions and technical standards required by your company.",
     "employers.services.onboarding.title": "Onboarding Support (90 Days)",
     "employers.services.onboarding.description": "Dedicated assistance during the first 3 months to ensure successful operational integration and friction-free.",
-    
+
     "employers.collaborations.title": "Technology Solutions",
     "employers.collaborations.titleHighlight": "& Alliances",
     "employers.collaborations.subtitle": "Beyond talent. Thanks to our strategic business alliance, we enhance your digital infrastructure with specialized IT services.",
@@ -232,12 +227,12 @@ export const translations = {
     "employers.collaborations.microsoft.description": "Comprehensive cloud management. We handle configuration, licenses, and security of your M365 environment so your team works without interruptions.",
     "employers.collaborations.webapp.title": "Web Application Management",
     "employers.collaborations.webapp.description": "Continuous technical support. Installation, maintenance, and optimization of your digital tools to ensure maximum operational performance.",
-    
+
     "employers.cta.title": "Ready to Build Your Dream Team?",
     "employers.cta.subtitle": "Register your company today and start accessing exceptional Latin American talent",
     "employers.cta.register": "Register Your Company",
     "employers.cta.consultation": "Schedule a Consultation",
-    
+
     // Contact Page
     "contact.hero.title": "Get in Touch",
     "contact.hero.subtitle": "Ready to start your journey? We're here to help",
@@ -261,18 +256,18 @@ export const translations = {
     "nav.candidates": "Para Candidatos",
     "nav.contact": "Contáctanos",
     "nav.getStarted": "Comenzar",
-    
+
     // Home Page
     "home.hero.title1": "Conectando Talento,",
     "home.hero.title2": "Construyendo Futuros",
     "home.hero.subtitle": "Conectamos profesionales latinoamericanos con oportunidades canadienses a través de HR-CALATIN Interexchange",
     "home.hero.employers": "Para Empleadores",
     "home.hero.candidates": "Para Candidatos",
-    
+
     "home.mission.title": "Nuestra",
     "home.mission.titleHighlight": "Misión",
     "home.mission.description": "Conectamos el mejor talento de Latinoamérica con empresas canadienses. Facilitamos la integración laboral creando oportunidades de crecimiento real para profesionales y empleadores visionarios.",
-    
+
     "home.why.title": "¿Por Qué Elegir",
     "home.why.titleHighlight": "HR-CALATIN",
     "home.why.subtitle": "Conexiones que Funcionan",
@@ -282,21 +277,21 @@ export const translations = {
     "home.why.quality.description": "Validación rigurosa. Las empresas reciben perfiles de alto nivel y los candidatos acceden a ofertas serias y confiables. Sin pérdidas de tiempo.",
     "home.why.support.title": "Integración Exitosa",
     "home.why.support.description": "Acompañamiento total. Facilitamos la llegada y adaptación del profesional, asegurando tranquilidad para el empleador y confianza para el nuevo talento.",
-    
+
     "home.portal.employers.title": "Para Empleadores",
     "home.portal.employers.description": "Accede a un grupo selecto de profesionales latinoamericanos calificados listos para contribuir al éxito de tu negocio canadiense.",
     "home.portal.employers.item1": "Búsqueda y emparejamiento personalizado de talento",
     "home.portal.employers.item2": "Evaluaciones integrales de habilidades",
     "home.portal.employers.item3": "Soporte de integración e incorporación",
     "home.portal.employers.button": "Explorar Portal de Empleadores",
-    
+
     "home.portal.candidates.title": "Para Candidatos",
     "home.portal.candidates.description": "Lanza tu carrera canadiense con orientación experta, recursos y acceso a los mejores empleadores que buscan tu talento.",
     "home.portal.candidates.item1": "Herramientas profesionales para crear currículum",
     "home.portal.candidates.item2": "Búsqueda de empleo y seguimiento de aplicaciones",
     "home.portal.candidates.item3": "Recursos de integración cultural",
     "home.portal.candidates.button": "Explorar Portal de Candidatos",
-    
+
     "home.pathways.title": "Vías Legales",
     "home.pathways.titleHighlight": " hacia Canadá",
     "home.pathways.subtitle": "En HR-CALATIN somos el puente entre la excelencia profesional de Latinoamérica y la visión de las empresas canadienses. Creamos el match perfecto: talento listo para aportar valor inmediato y oportunidades de carrera que transforman vidas.",
@@ -312,18 +307,18 @@ export const translations = {
     "home.pathways.fta.educationDesc": "",
     "home.pathways.sawp.title": "Sector Agrícola (SAWP)",
     "home.pathways.sawp.description": "Personal para el Agro (SAWP). Cubrimos sus temporadas de cosecha con trabajadores experimentados de México y el Caribe. Garantizamos mano de obra confiable y legal para el campo canadiense.",
-    
+
     "home.stats.placements": "Colocaciones Exitosas",
     "home.stats.companies": "Empresas Asociadas",
     "home.stats.satisfaction": "Tasa de Satisfacción",
     "home.stats.experience": "Años de Experiencia",
-    
+
     // Candidates Page
     "candidates.hero.title1": "Tu Carrera",
     "candidates.hero.title2": "Canadiense Comienza Aquí",
     "candidates.hero.subtitle": "Transforma tus sueños profesionales en realidad con orientación experta y acceso a los mejores empleadores canadienses",
     "candidates.hero.button": "Crea Tu Perfil Hoy",
-    
+
     "candidates.why.title": "Tu Aliado para Triunfar en Canadá",
     "candidates.why.subtitle": "No somos solo una bolsa de trabajo. Somos tu puente seguro hacia una carrera internacional exitosa.",
     "candidates.why.jobs.title": "Oportunidades Verificadas",
@@ -340,23 +335,18 @@ export const translations = {
     "candidates.why.coaching.description": "No postules a ciegas. Recibe mentoría experta y simulacros de entrevista para convertir oportunidades en ofertas de trabajo.",
     "candidates.why.legal.title": "Plan de Permanencia Legal",
     "candidates.why.legal.description": "No solo te traemos, te ayudamos a construir tu futuro aquí. Diseñamos contigo una hoja de ruta clara para transitar de tu permiso temporal hacia la residencia permanente.",
-    
+
     "candidates.training.title": "Capacitación y",
     "candidates.training.titleHighlight": "Apoyo de Integración",
     "candidates.training.subtitle": "Preparamos a los profesionales para el éxito en Canadá con programas integrales de capacitación e integración",
     "candidates.training.language.title": "Capacitación de Idiomas",
-    "candidates.training.language.description": "Cursos intensivos de inglés y francés para comunicación efectiva",
-    "candidates.training.technical.title": "Habilidades Técnicas",
-    "candidates.training.technical.description": "Capacitación especializada alineada con los estándares del mercado canadiense",
-    "candidates.training.cultural.title": "Adaptación Cultural",
-    "candidates.training.cultural.description": "Talleres sobre cultura laboral canadiense para facilitar tu transición",
+    "candidates.training.language.description": "Cursos intensivos de inglés y francés diseñados para lograr una comunicación efectiva en el entorno profesional canadiense.",
     "candidates.training.resume.title": "Creación de Currículum",
-    "candidates.training.resume.description": "Ayuda experta para adaptar tu currículum a los estándares canadienses",
-    "candidates.training.interview.title": "Preparación de Entrevistas",
-    "candidates.training.interview.description": "Entrevistas simuladas y consejos para entrevistas de trabajo canadienses",
-    "candidates.training.network.title": "Red de Apoyo",
-    "candidates.training.network.description": "Comunidad de profesionales para compartir experiencias y consejos",
-    
+    "candidates.training.resume.description": "Asesoría experta para adaptar tu perfil profesional y CV a los estándares y formatos que exigen los reclutadores en Canadá.",
+    "candidates.training.arrival.title": "Primeros Pasos en Canadá",
+    "candidates.training.arrival.description": "Te acompañamos en tus trámites iniciales: gestión de línea telefónica, apertura de cuenta bancaria y otros requisitos esenciales para tu nueva vida.",
+    "candidates.training.button": "Saber más",
+
     "candidates.path.title": "Tu Camino al Éxito",
     "candidates.path.subtitle": "Cuatro simples pasos para lanzar tu carrera canadiense",
     "candidates.path.step1.title": "Regístrate",
@@ -367,7 +357,7 @@ export const translations = {
     "candidates.path.step3.description": "Explora oportunidades y aplica a posiciones que coincidan con tus habilidades",
     "candidates.path.step4.title": "Inicia tu Carrera",
     "candidates.path.step4.description": "Consigue empleo y recibe apoyo continuo durante tu transición",
-    
+
     "candidates.tools.title": "Herramientas Poderosas para Tu Éxito",
     "candidates.tools.subtitle": "Todo lo que necesitas para destacar y triunfar",
     "candidates.tools.resume.title": "Constructor Inteligente de CV",
@@ -378,10 +368,10 @@ export const translations = {
     "candidates.tools.learning.description": "Guías completas sobre cultura laboral canadiense, consejos de entrevista y desarrollo profesional",
     "candidates.tools.acceleration.title": "Programa de Aceleración de Carrera",
     "candidates.tools.acceleration.description": "Acceso exclusivo a mentoría, eventos de networking y talleres de desarrollo profesional",
-    
+
     "candidates.apply.title": "¡Aplica Ahora!",
     "candidates.apply.subtitle": "Da el primer paso hacia tu carrera canadiense. Completa nuestro formulario de aplicación y nuestro equipo te contactará.",
-    
+
     "candidates.cta.title": "Contáctanos",
     "candidates.cta.subtitle": "¿Tienes preguntas sobre nuestros programas o servicios? Estamos aquí para ayudarte en cada paso del camino.",
     "candidates.cta.button": "Contáctanos",
@@ -437,7 +427,7 @@ export const translations = {
     "employers.hero.title2": "Próximo Talento",
     "employers.hero.subtitle": "Accede a profesionales latinoamericanos precalificados listos para impulsar tu negocio",
     "employers.hero.button": "Publica Tu Primera Vacante",
-    
+
     "employers.why.title": "Soluciones de Talento Internacional",
     "employers.why.subtitle": "Eliminamos las barreras de la contratación transfronteriza para que usted se enfoque en crecer.",
     "employers.why.talent.title": "Talento Validado",
@@ -452,7 +442,7 @@ export const translations = {
     "employers.why.cost.description": "Optimice su presupuesto. Menor costo por contratación y tiempos de respuesta más rápidos que el reclutamiento tradicional.",
     "employers.why.partnership.title": "Respaldo y Garantía",
     "employers.why.partnership.description": "Su inversión está protegida. Ofrecemos soporte continuo y una garantía de reemplazo sin costo si el candidato se retira o no cumple expectativas dentro del periodo acordado (30-90 días).",
-    
+
     "employers.services.title": "Nuestros Servicios para Empleadores",
     "employers.services.subtitle": "Soluciones integrales de talento diseñadas para la empresa canadiense.",
     "employers.services.search.title": "Búsqueda de Talento a Medida",
@@ -463,7 +453,7 @@ export const translations = {
     "employers.services.training.description": "Capacitamos al talento en las funciones específicas del puesto y los estándares técnicos requeridos por su empresa.",
     "employers.services.onboarding.title": "Soporte de Onboarding (90 Días)",
     "employers.services.onboarding.description": "Asistencia dedicada durante los primeros 3 meses para garantizar una integración operativa exitosa y sin contratiempos.",
-    
+
     "employers.collaborations.title": "Soluciones Tecnológicas",
     "employers.collaborations.titleHighlight": "& Alianzas",
     "employers.collaborations.subtitle": "Más allá del talento. Gracias a nuestra alianza comercial estratégica, potenciamos su infraestructura digital con servicios TI especializados.",
@@ -475,12 +465,12 @@ export const translations = {
     "employers.collaborations.microsoft.description": "Gestión integral de su nube. Nos encargamos de la configuración, licencias y seguridad de su entorno M365 para que su equipo trabaje sin interrupciones.",
     "employers.collaborations.webapp.title": "Gestión de Aplicaciones Web",
     "employers.collaborations.webapp.description": "Soporte técnico continuo. Instalación, mantenimiento y optimización de sus herramientas digitales para asegurar su máximo rendimiento operativo.",
-    
+
     "employers.cta.title": "¿Listo para Construir Tu Equipo Ideal?",
     "employers.cta.subtitle": "Registra tu empresa hoy y comienza a acceder a talento latinoamericano excepcional",
     "employers.cta.register": "Registra Tu Empresa",
     "employers.cta.consultation": "Agenda una Consulta",
-    
+
     // Contact Page
     "contact.hero.title": "Contáctanos",
     "contact.hero.subtitle": "¿Listo para comenzar tu viaje? Estamos aquí para ayudar",
