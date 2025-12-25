@@ -58,7 +58,7 @@ const Employers = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <UserCheck className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-extrabold">{t("employers.why.talent.title")}</CardTitle>
@@ -72,7 +72,7 @@ const Employers = () => {
 
             <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <BarChart className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-extrabold">{t("employers.why.cost.title")}</CardTitle>
@@ -86,7 +86,7 @@ const Employers = () => {
 
             <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <Award className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle className="text-2xl font-extrabold">{t("employers.why.partnership.title")}</CardTitle>
@@ -118,12 +118,12 @@ const Employers = () => {
             <Card className="border-2 border-primary/20">
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
-                    <Users className="h-5 w-5 text-gold-foreground" />
+                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center flex-shrink-0">
+                    <Users className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl mb-2">{t("employers.services.training.title")}</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-2xl mb-2 font-extrabold text-secondary">{t("employers.services.training.title")}</CardTitle>
+                    <CardDescription className="font-semibold text-muted-foreground">
                       {t("employers.services.training.description")}
                     </CardDescription>
                   </div>
@@ -134,12 +134,12 @@ const Employers = () => {
             <Card className="border-2 border-primary/20">
               <CardHeader>
                 <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="h-5 w-5 text-gold-foreground" />
+                  <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl mb-2">{t("employers.services.onboarding.title")}</CardTitle>
-                    <CardDescription>
+                    <CardTitle className="text-2xl mb-2 font-extrabold text-secondary">{t("employers.services.onboarding.title")}</CardTitle>
+                    <CardDescription className="font-semibold text-muted-foreground">
                       {t("employers.services.onboarding.description")}
                     </CardDescription>
                   </div>
