@@ -289,7 +289,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground mb-8">
               {t("getStarted.help.subtitle")}
             </p>
-            <Button variant="outline" size="lg" asChild>
+            <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-accent hover:text-white transition-smooth shadow-lg" asChild>
               <Link to="/contact">{t("getStarted.help.button")}</Link>
             </Button>
           </div>

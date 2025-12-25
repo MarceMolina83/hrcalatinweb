@@ -31,8 +31,8 @@ const Candidates = () => {
             <p className="text-xl md:text-2xl mb-8 text-foreground/80">
               {t("candidates.hero.subtitle")}
             </p>
-            <Button size="lg" variant="secondary" className="text-lg" asChild>
-              <a href="/#get-started">{t("candidates.hero.button")}</a>
+            <Button size="lg" variant="gold" className="text-lg font-bold hover:bg-accent hover:text-white transition-smooth shadow-lg" asChild>
+              <a href="#apply-form">{t("candidates.hero.button")}</a>
             </Button>
           </div>
         </div>
@@ -52,10 +52,10 @@ const Candidates = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-accent flex items-center justify-center mb-4">
-                  <Briefcase className="h-6 w-6 text-accent-foreground" />
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <Briefcase className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle>{t("candidates.why.jobs.title")}</CardTitle>
               </CardHeader>
@@ -66,10 +66,10 @@ const Candidates = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-accent flex items-center justify-center mb-4">
-                  <FileText className="h-6 w-6 text-accent-foreground" />
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <FileText className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle>{t("candidates.why.resume.title")}</CardTitle>
               </CardHeader>
@@ -80,10 +80,10 @@ const Candidates = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-accent flex items-center justify-center mb-4">
-                  <Award className="h-6 w-6 text-accent-foreground" />
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <Award className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle>{t("candidates.why.legal.title")}</CardTitle>
               </CardHeader>
