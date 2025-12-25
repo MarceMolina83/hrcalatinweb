@@ -167,73 +167,65 @@ const Employers = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <Card className="border-2 border-primary/30 hover:border-primary transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <BarChart className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl mb-2">{t("employers.collaborations.powerbi.title")}</CardTitle>
-                  </div>
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <BarChart className="h-10 w-10 text-white" />
                 </div>
+                <CardTitle className="text-2xl font-extrabold text-secondary tracking-tight">
+                  {t("employers.collaborations.powerbi.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.collaborations.powerbi.description")}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-accent/30 hover:border-accent transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Globe className="h-6 w-6 text-accent" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl mb-2">{t("employers.collaborations.web.title")}</CardTitle>
-                  </div>
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <Globe className="h-10 w-10 text-white" />
                 </div>
+                <CardTitle className="text-2xl font-extrabold text-secondary tracking-tight">
+                  {t("employers.collaborations.web.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.collaborations.web.description")}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-gold/30 hover:border-gold transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
-                    <Award className="h-6 w-6 text-gold" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl mb-2">{t("employers.collaborations.microsoft.title")}</CardTitle>
-                  </div>
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <Award className="h-10 w-10 text-white" />
                 </div>
+                <CardTitle className="text-2xl font-extrabold text-secondary tracking-tight">
+                  {t("employers.collaborations.microsoft.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.collaborations.microsoft.description")}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-primary/30 hover:border-primary transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-xl mb-2">{t("employers.collaborations.webapp.title")}</CardTitle>
-                  </div>
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <TrendingUp className="h-10 w-10 text-white" />
                 </div>
+                <CardTitle className="text-2xl font-extrabold text-secondary tracking-tight">
+                  {t("employers.collaborations.webapp.title")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.collaborations.webapp.description")}
                 </p>
               </CardContent>
