@@ -61,10 +61,10 @@ const Employers = () => {
                 <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <UserCheck className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("employers.why.talent.title")}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold">{t("employers.why.talent.title")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.why.talent.description")}
                 </p>
               </CardContent>
@@ -75,10 +75,10 @@ const Employers = () => {
                 <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <BarChart className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("employers.why.cost.title")}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold">{t("employers.why.cost.title")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.why.cost.description")}
                 </p>
               </CardContent>
@@ -89,10 +89,10 @@ const Employers = () => {
                 <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <Award className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("employers.why.partnership.title")}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold">{t("employers.why.partnership.title")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("employers.why.partnership.description")}
                 </p>
               </CardContent>
