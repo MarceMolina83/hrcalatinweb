@@ -57,10 +57,10 @@ const Candidates = () => {
                 <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <Briefcase className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("candidates.why.jobs.title")}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold">{t("candidates.why.jobs.title")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("candidates.why.jobs.description")}
                 </p>
               </CardContent>
@@ -71,10 +71,10 @@ const Candidates = () => {
                 <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <FileText className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("candidates.why.resume.title")}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold">{t("candidates.why.resume.title")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("candidates.why.resume.description")}
                 </p>
               </CardContent>
@@ -85,10 +85,10 @@ const Candidates = () => {
                 <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
                   <Target className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("candidates.why.legal.title")}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold">{t("candidates.why.legal.title")}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-semibold">
                   {t("candidates.why.legal.description")}
                 </p>
               </CardContent>
