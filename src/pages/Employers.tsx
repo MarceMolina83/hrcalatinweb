@@ -177,7 +177,7 @@ const Employers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-semibold">
+                <p className="text-muted-foreground font-bold">
                   {t("employers.collaborations.powerbi.description")}
                 </p>
               </CardContent>
@@ -193,7 +193,7 @@ const Employers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-semibold">
+                <p className="text-muted-foreground font-bold">
                   {t("employers.collaborations.web.description")}
                 </p>
               </CardContent>
@@ -209,7 +209,7 @@ const Employers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-semibold">
+                <p className="text-muted-foreground font-bold">
                   {t("employers.collaborations.microsoft.description")}
                 </p>
               </CardContent>
@@ -225,7 +225,7 @@ const Employers = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-semibold">
+                <p className="text-muted-foreground font-bold">
                   {t("employers.collaborations.webapp.description")}
                 </p>
               </CardContent>
