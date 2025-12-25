@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { FileText, Target, Briefcase, MapPin } from "lucide-react";
 import candidatesImage from "@/assets/candidates-section.jpg";
-import logo from "@/assets/logo.jpeg";
 import CandidateApplicationForm from "@/components/CandidateApplicationForm";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -42,7 +41,6 @@ const Candidates = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <img src={logo} alt="HR-CALATIN Logo" className="h-24 w-24 object-contain mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               {t("candidates.why.title")}
             </h2>

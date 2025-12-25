@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { Users, CheckCircle, Award, BarChart, Globe, UserCheck, TrendingUp } from "lucide-react";
 import employersImage from "@/assets/employers-section.jpg";
-import logo from "@/assets/logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Employers = () => {
@@ -46,7 +45,6 @@ const Employers = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <img src={logo} alt="HR-CALATIN Logo" className="h-24 w-24 object-contain mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               {t("employers.why.title")}
             </h2>
