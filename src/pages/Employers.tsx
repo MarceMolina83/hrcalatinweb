@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Search, Users, CheckCircle, Award, BarChart, Globe, UserCheck, TrendingUp } from "lucide-react";
+import { Users, CheckCircle, Award, BarChart, Globe, UserCheck, TrendingUp } from "lucide-react";
 import employersImage from "@/assets/employers-section.jpg";
 import logo from "@/assets/logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -114,37 +114,6 @@ const Employers = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 border-primary/20">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
-                    <Search className="h-5 w-5 text-gold-foreground" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-2xl mb-2">{t("employers.services.search.title")}</CardTitle>
-                    <CardDescription>
-                      {t("employers.services.search.description")}
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-2 border-primary/20">
-              <CardHeader>
-                <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-lg gradient-gold flex items-center justify-center flex-shrink-0">
-                    <Award className="h-5 w-5 text-gold-foreground" />
-                  </div>
-                  <div>
-                    <CardTitle className="text-2xl mb-2">{t("employers.services.assessment.title")}</CardTitle>
-                    <CardDescription>
-                      {t("employers.services.assessment.description")}
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-            </Card>
 
             <Card className="border-2 border-primary/20">
               <CardHeader>
