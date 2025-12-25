@@ -96,8 +96,8 @@ export const translations = {
     "candidates.why.skills.description": "Close the technical gap. Courses and certifications to align your competencies with what the Canadian industry demands today.",
     "candidates.why.coaching.title": "Career Strategy",
     "candidates.why.coaching.description": "Don't apply blindly. Receive expert mentorship and interview simulations to turn opportunities into job offers.",
-    "candidates.why.legal.title": "Legal Permanence Plan",
-    "candidates.why.legal.description": "We don't just bring you here, we help you build your future. We design with you a clear roadmap to transition from your temporary permit to permanent residence.",
+    "candidates.why.legal.title": "Career & Goals Mentorship",
+    "candidates.why.legal.description": "We don't just accompany you in the process, we boost your future. We guide your professional trajectory so you reach your goals, with guaranteed success inside or outside of Canada.",
 
     "candidates.training.title": "Training &",
     "candidates.training.titleHighlight": "Integration Support",
@@ -335,8 +335,8 @@ export const translations = {
     "candidates.why.skills.description": "Cierra la brecha técnica. Cursos y certificaciones para alinear tus competencias con lo que la industria canadiense exige hoy.",
     "candidates.why.coaching.title": "Estrategia de Carrera",
     "candidates.why.coaching.description": "No postules a ciegas. Recibe mentoría experta y simulacros de entrevista para convertir oportunidades en ofertas de trabajo.",
-    "candidates.why.legal.title": "Plan de Permanencia Legal",
-    "candidates.why.legal.description": "No solo te traemos, te ayudamos a construir tu futuro aquí. Diseñamos contigo una hoja de ruta clara para transitar de tu permiso temporal hacia la residencia permanente.",
+    "candidates.why.legal.title": "Mentoria en Metas y Carrera",
+    "candidates.why.legal.description": "No solo te acompañamos en el proceso, impulsamos tu futuro. Guiamos tu trayectoria profesional para que alcances tus metas, con éxito garantizado dentro o fuera de Canadá.",
 
     "candidates.training.title": "Capacitación y",
     "candidates.training.titleHighlight": "Apoyo de Integración",
