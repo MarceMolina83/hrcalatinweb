@@ -8,28 +8,34 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Upload, CheckCircle, Loader2, Shield } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const latinAmericanCountries = [
-  "Argentina", "Bolivia", "Brasil", "Chile", "Colombia", "Costa Rica", 
-  "Cuba", "Ecuador", "El Salvador", "Guatemala", "Honduras", "México", 
-  "Nicaragua", "Panamá", "Paraguay", "Perú", "República Dominicana", 
-  "Uruguay", "Venezuela"
+  { id: "argentina", key: "candidates.form.country.argentina" },
+  { id: "bolivia", key: "candidates.form.country.bolivia" },
+  { id: "brazil", key: "candidates.form.country.brazil" },
+  { id: "chile", key: "candidates.form.country.chile" },
+  { id: "colombia", key: "candidates.form.country.colombia" },
+  { id: "costa_rica", key: "candidates.form.country.costa_rica" },
+  { id: "cuba", key: "candidates.form.country.cuba" },
+  { id: "ecuador", key: "candidates.form.country.ecuador" },
+  { id: "el_salvador", key: "candidates.form.country.el_salvador" },
+  { id: "guatemala", key: "candidates.form.country.guatemala" },
+  { id: "haiti", key: "candidates.form.country.haiti" },
+  { id: "honduras", key: "candidates.form.country.honduras" },
+  { id: "mexico", key: "candidates.form.country.mexico" },
+  { id: "nicaragua", key: "candidates.form.country.nicaragua" },
+  { id: "panama", key: "candidates.form.country.panama" },
+  { id: "paraguay", key: "candidates.form.country.paraguay" },
+  { id: "peru", key: "candidates.form.country.peru" },
+  { id: "dominican_republic", key: "candidates.form.country.dominican_republic" },
+  { id: "uruguay", key: "candidates.form.country.uruguay" },
+  { id: "venezuela", key: "candidates.form.country.venezuela" },
+  { id: "other", key: "candidates.form.country.other" }
 ];
-
-const sectors = [
-  "Tecnología / IT", "Ingeniería", "Salud / Healthcare", "Educación",
-  "Agricultura", "Finanzas", "Manufactura", "Construcción", 
-  "Hotelería / Turismo", "Transporte / Logística", "Otro"
-];
-
-const educationLevels = [
-  "Secundaria / High School", "Técnico / Technical", "Licenciatura / Bachelor's",
-  "Maestría / Master's", "Doctorado / PhD"
-];
-
-const languageLevels = ["Básico", "Intermedio", "Avanzado", "Nativo / Fluido"];
 
 const CandidateApplicationForm = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -90,8 +96,8 @@ const CandidateApplicationForm = () => {
       // Check file size (5MB max)
       if (file.size > 5 * 1024 * 1024) {
         toast({
-          title: "Archivo muy grande",
-          description: "El archivo debe ser menor a 5MB",
+          title: t("candidates.form.error.fileSize"),
+          description: t("candidates.form.error.fileSizeDesc"),
           variant: "destructive"
         });
         e.target.value = '';
@@ -107,8 +113,8 @@ const CandidateApplicationForm = () => {
 
       if (!allowedTypes.includes(file.type)) {
         toast({
-          title: "Tipo de archivo no válido",
-          description: "Solo se permiten archivos PDF o Word (.doc, .docx)",
+          title: t("candidates.form.error.fileType"),
+          description: t("candidates.form.error.fileTypeDesc"),
           variant: "destructive"
         });
         e.target.value = '';
@@ -161,8 +167,8 @@ const CandidateApplicationForm = () => {
     // Validate CAPTCHA
     if (!validateCaptcha()) {
       toast({
-        title: "CAPTCHA incorrecto",
-        description: "Por favor resuelve correctamente el problema matemático.",
+        title: t("candidates.form.error.captcha"),
+        description: t("candidates.form.error.captchaDesc"),
         variant: "destructive"
       });
       return false;
@@ -171,8 +177,8 @@ const CandidateApplicationForm = () => {
     // Check rate limit
     if (!checkRateLimit()) {
       toast({
-        title: "Límite de envíos alcanzado",
-        description: "Solo puedes enviar 3 aplicaciones por día. Inténtalo mañana.",
+        title: t("candidates.form.error.rateLimit"),
+        description: t("candidates.form.error.rateLimitDesc"),
         variant: "destructive"
       });
       return false;
@@ -181,8 +187,8 @@ const CandidateApplicationForm = () => {
     // Validate email format
     if (!validateEmail(formData.email)) {
       toast({
-        title: "Email inválido",
-        description: "Por favor ingresa un email válido.",
+        title: t("candidates.form.error.invalidEmail"),
+        description: t("candidates.form.error.invalidEmailDesc"),
         variant: "destructive"
       });
       return false;
@@ -191,8 +197,8 @@ const CandidateApplicationForm = () => {
     // Check required fields
     if (!formData.full_name.trim() || !formData.email.trim() || !formData.country || !formData.profession.trim()) {
       toast({
-        title: "Campos requeridos faltantes",
-        description: "Por favor completa todos los campos requeridos.",
+        title: t("candidates.form.error.missingFields"),
+        description: t("candidates.form.error.missingFieldsDesc"),
         variant: "destructive"
       });
       return false;
@@ -228,10 +234,10 @@ const CandidateApplicationForm = () => {
 
           // Check if the error is due to bucket not existing
           if (uploadError.message?.includes('not found') || uploadError.message?.includes('does not exist')) {
-            throw new Error("Error de configuración: El almacenamiento de currículums no está configurado. Por favor contacta al administrador.");
+            throw new Error(t("candidates.form.error.config"));
           }
 
-          throw new Error("Error al subir el currículum. Por favor intenta de nuevo.");
+          throw new Error(t("candidates.form.error.upload"));
         }
 
         // Store only the file path - signed URLs should be generated when admin needs to view
@@ -266,8 +272,8 @@ const CandidateApplicationForm = () => {
 
       setIsSuccess(true);
       toast({
-        title: "¡Aplicación enviada!",
-        description: "Hemos recibido tu información. Te contactaremos pronto.",
+        title: t("candidates.form.submit.success.title"),
+        description: t("candidates.form.submit.success.desc"),
       });
 
       // Update rate limiting counters
@@ -287,8 +293,8 @@ const CandidateApplicationForm = () => {
     } catch (error) {
       console.error("Submission error:", error);
       toast({
-        title: "Error",
-        description: error instanceof Error ? error.message : "Error al enviar la aplicación",
+        title: t("candidates.form.error.title"),
+        description: error instanceof Error ? error.message : t("candidates.form.error.generic"),
         variant: "destructive"
       });
     } finally {
@@ -303,12 +309,12 @@ const CandidateApplicationForm = () => {
           <div className="h-20 w-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="h-10 w-10 text-primary" />
           </div>
-          <h3 className="text-3xl font-bold text-foreground mb-4">¡Gracias por tu aplicación!</h3>
+          <h3 className="text-3xl font-bold text-foreground mb-4">{t("candidates.form.submit.success.cardTitle")}</h3>
           <p className="text-lg text-muted-foreground mb-6">
-            Hemos recibido tu información correctamente. Nuestro equipo revisará tu perfil y te contactará pronto.
+            {t("candidates.form.submit.success.cardDesc")}
           </p>
           <Button onClick={() => setIsSuccess(false)} variant="outline">
-            Enviar otra aplicación
+            {t("candidates.form.submit.success.again")}
           </Button>
         </CardContent>
       </Card>
@@ -318,32 +324,32 @@ const CandidateApplicationForm = () => {
   return (
     <Card className="border-2 border-primary/30 max-w-3xl mx-auto">
       <CardHeader className="text-center">
-        <CardTitle className="text-3xl text-primary">Aplica para Oportunidades en Canadá</CardTitle>
+        <CardTitle className="text-3xl text-primary">{t("candidates.apply.title")}</CardTitle>
         <CardDescription className="text-lg">
-          Completa el formulario y sube tu currículum para ser considerado por empleadores canadienses
+          {t("candidates.apply.subtitle")}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Personal Information */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground border-b pb-2">Información Personal</h3>
-            
+            <h3 className="text-xl font-semibold text-foreground border-b pb-2">{t("candidates.form.personal.title")}</h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="full_name">Nombre Completo *</Label>
+                <Label htmlFor="full_name">{t("candidates.form.personal.name")}</Label>
                 <Input
                   id="full_name"
                   name="full_name"
                   value={formData.full_name}
                   onChange={handleInputChange}
                   required
-                  placeholder="Juan Pérez"
+                  placeholder={t("candidates.form.personal.namePlaceholder")}
                 />
               </div>
-              
+
               <div className="space-y-2">
-                <Label htmlFor="email">Correo Electrónico *</Label>
+                <Label htmlFor="email">{t("candidates.form.personal.email")}</Label>
                 <Input
                   id="email"
                   name="email"
@@ -351,32 +357,32 @@ const CandidateApplicationForm = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  placeholder="juan@ejemplo.com"
+                  placeholder={t("candidates.form.personal.emailPlaceholder")}
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="phone">Teléfono</Label>
+                <Label htmlFor="phone">{t("candidates.form.personal.phone")}</Label>
                 <Input
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="+52 55 1234 5678"
+                  placeholder={t("candidates.form.personal.phonePlaceholder")}
                 />
               </div>
-              
+
               <div className="space-y-2">
-                <Label htmlFor="country">País de Residencia *</Label>
+                <Label htmlFor="country">{t("candidates.form.personal.country")}</Label>
                 <Select onValueChange={(value) => handleSelectChange("country", value)} required>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecciona tu país" />
+                    <SelectValue placeholder={t("candidates.form.personal.countryPlaceholder")} />
                   </SelectTrigger>
                   <SelectContent>
                     {latinAmericanCountries.map((country) => (
-                      <SelectItem key={country} value={country}>{country}</SelectItem>
+                      <SelectItem key={country.id} value={country.id}>{t(country.key)}</SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -384,36 +390,36 @@ const CandidateApplicationForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="city">Ciudad</Label>
+              <Label htmlFor="city">{t("candidates.form.personal.city")}</Label>
               <Input
                 id="city"
                 name="city"
                 value={formData.city}
                 onChange={handleInputChange}
-                placeholder="Ciudad de México"
+                placeholder={t("candidates.form.personal.cityPlaceholder")}
               />
             </div>
           </div>
 
           {/* Professional Information */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground border-b pb-2">Información Profesional</h3>
-            
+            <h3 className="text-xl font-semibold text-foreground border-b pb-2">{t("candidates.form.professional.title")}</h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="profession">Profesión / Área de Trabajo *</Label>
+                <Label htmlFor="profession">{t("candidates.form.professional.profession")}</Label>
                 <Input
                   id="profession"
                   name="profession"
                   value={formData.profession}
                   onChange={handleInputChange}
                   required
-                  placeholder="Ingeniero de Software"
+                  placeholder={t("candidates.form.professional.professionPlaceholder")}
                 />
               </div>
-              
+
               <div className="space-y-2">
-                <Label htmlFor="years_experience">Años de Experiencia</Label>
+                <Label htmlFor="years_experience">{t("candidates.form.professional.experience")}</Label>
                 <Input
                   id="years_experience"
                   name="years_experience"
@@ -422,83 +428,95 @@ const CandidateApplicationForm = () => {
                   max="50"
                   value={formData.years_experience}
                   onChange={handleInputChange}
-                  placeholder="5"
+                  placeholder={t("candidates.form.professional.experiencePlaceholder")}
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label>Nivel de Educación</Label>
+                <Label>{t("candidates.form.professional.education")}</Label>
                 <Select onValueChange={(value) => handleSelectChange("education_level", value)}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecciona tu nivel" />
+                    <SelectValue placeholder={t("candidates.form.professional.educationPlaceholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {educationLevels.map((level) => (
-                      <SelectItem key={level} value={level}>{level}</SelectItem>
-                    ))}
+                    <SelectItem value="secondary">{t("candidates.form.education.secondary")}</SelectItem>
+                    <SelectItem value="technical">{t("candidates.form.education.technical")}</SelectItem>
+                    <SelectItem value="bachelors">{t("candidates.form.education.bachelors")}</SelectItem>
+                    <SelectItem value="masters">{t("candidates.form.education.masters")}</SelectItem>
+                    <SelectItem value="phd">{t("candidates.form.education.phd")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div className="space-y-2">
-                <Label>Sector de Interés</Label>
+                <Label>{t("candidates.form.professional.sector")}</Label>
                 <Select onValueChange={(value) => handleSelectChange("preferred_sector", value)}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecciona un sector" />
+                    <SelectValue placeholder={t("candidates.form.professional.sectorPlaceholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {sectors.map((sector) => (
-                      <SelectItem key={sector} value={sector}>{sector}</SelectItem>
-                    ))}
+                    <SelectItem value="tech">{t("candidates.form.sector.tech")}</SelectItem>
+                    <SelectItem value="engineering">{t("candidates.form.sector.engineering")}</SelectItem>
+                    <SelectItem value="healthcare">{t("candidates.form.sector.healthcare")}</SelectItem>
+                    <SelectItem value="education">{t("candidates.form.sector.education")}</SelectItem>
+                    <SelectItem value="agriculture">{t("candidates.form.sector.agriculture")}</SelectItem>
+                    <SelectItem value="finance">{t("candidates.form.sector.finance")}</SelectItem>
+                    <SelectItem value="manufacturing">{t("candidates.form.sector.manufacturing")}</SelectItem>
+                    <SelectItem value="construction">{t("candidates.form.sector.construction")}</SelectItem>
+                    <SelectItem value="hospitality">{t("candidates.form.sector.hospitality")}</SelectItem>
+                    <SelectItem value="logistics">{t("candidates.form.sector.logistics")}</SelectItem>
+                    <SelectItem value="other">{t("candidates.form.sector.other")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="linkedin_url">LinkedIn URL</Label>
+              <Label htmlFor="linkedin_url">{t("candidates.form.professional.linkedin")}</Label>
               <Input
                 id="linkedin_url"
                 name="linkedin_url"
                 type="url"
                 value={formData.linkedin_url}
                 onChange={handleInputChange}
-                placeholder="https://linkedin.com/in/tu-perfil"
+                placeholder={t("candidates.form.professional.linkedinPlaceholder")}
               />
             </div>
           </div>
 
           {/* Languages */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground border-b pb-2">Idiomas</h3>
-            
+            <h3 className="text-xl font-semibold text-foreground border-b pb-2">{t("candidates.form.languages.title")}</h3>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label>Nivel de Inglés</Label>
+                <Label>{t("candidates.form.languages.english")}</Label>
                 <Select onValueChange={(value) => handleSelectChange("english_level", value)}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecciona tu nivel" />
+                    <SelectValue placeholder={t("candidates.form.languages.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {languageLevels.map((level) => (
-                      <SelectItem key={level} value={level}>{level}</SelectItem>
-                    ))}
+                    <SelectItem value="basic">{t("candidates.form.language.basic")}</SelectItem>
+                    <SelectItem value="intermediate">{t("candidates.form.language.intermediate")}</SelectItem>
+                    <SelectItem value="advanced">{t("candidates.form.language.advanced")}</SelectItem>
+                    <SelectItem value="native">{t("candidates.form.language.native")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
-              
+
               <div className="space-y-2">
-                <Label>Nivel de Francés</Label>
+                <Label>{t("candidates.form.languages.french")}</Label>
                 <Select onValueChange={(value) => handleSelectChange("french_level", value)}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecciona tu nivel" />
+                    <SelectValue placeholder={t("candidates.form.languages.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {languageLevels.map((level) => (
-                      <SelectItem key={level} value={level}>{level}</SelectItem>
-                    ))}
+                    <SelectItem value="basic">{t("candidates.form.language.basic")}</SelectItem>
+                    <SelectItem value="intermediate">{t("candidates.form.language.intermediate")}</SelectItem>
+                    <SelectItem value="advanced">{t("candidates.form.language.advanced")}</SelectItem>
+                    <SelectItem value="native">{t("candidates.form.language.native")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -507,17 +525,17 @@ const CandidateApplicationForm = () => {
 
           {/* Resume Upload */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground border-b pb-2">Currículum</h3>
-            
+            <h3 className="text-xl font-semibold text-foreground border-b pb-2">{t("candidates.form.resume.title")}</h3>
+
             <div className="space-y-2">
-              <Label htmlFor="resume">Sube tu CV (PDF, DOC, DOCX - Max 5MB)</Label>
+              <Label htmlFor="resume">{t("candidates.form.resume.label")}</Label>
               <div className="flex items-center gap-4">
-                <label 
-                  htmlFor="resume" 
+                <label
+                  htmlFor="resume"
                   className="flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 rounded-lg cursor-pointer transition-colors border border-primary/30"
                 >
                   <Upload className="h-5 w-5 text-primary" />
-                  <span className="text-primary font-medium">Seleccionar archivo</span>
+                  <span className="text-primary font-medium">{t("candidates.form.resume.button")}</span>
                 </label>
                 <Input
                   id="resume"
@@ -535,32 +553,32 @@ const CandidateApplicationForm = () => {
 
           {/* Additional Information */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-foreground border-b pb-2">Información Adicional</h3>
-            
+            <h3 className="text-xl font-semibold text-foreground border-b pb-2">{t("candidates.form.additional.title")}</h3>
+
             <div className="space-y-2">
-              <Label>Estado de Permiso de Trabajo</Label>
+              <Label>{t("candidates.form.additional.permit")}</Label>
               <Select onValueChange={(value) => handleSelectChange("work_permit_status", value)}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Selecciona tu situación" />
+                  <SelectValue placeholder={t("candidates.form.additional.permitPlaceholder")} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="none">No tengo permiso de trabajo</SelectItem>
-                  <SelectItem value="working_holiday">Working Holiday Visa</SelectItem>
-                  <SelectItem value="work_permit">Permiso de trabajo activo</SelectItem>
-                  <SelectItem value="permanent_resident">Residente permanente</SelectItem>
-                  <SelectItem value="citizen">Ciudadano canadiense</SelectItem>
+                  <SelectItem value="none">{t("candidates.form.permit.none")}</SelectItem>
+                  <SelectItem value="working_holiday">{t("candidates.form.permit.holiday")}</SelectItem>
+                  <SelectItem value="work_permit">{t("candidates.form.permit.active")}</SelectItem>
+                  <SelectItem value="permanent_resident">{t("candidates.form.permit.resident")}</SelectItem>
+                  <SelectItem value="citizen">{t("candidates.form.permit.citizen")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="cover_letter">Carta de Presentación / Mensaje</Label>
+              <Label htmlFor="cover_letter">{t("candidates.form.additional.coverLetter")}</Label>
               <Textarea
                 id="cover_letter"
                 name="cover_letter"
                 value={formData.cover_letter}
                 onChange={handleInputChange}
-                placeholder="Cuéntanos sobre ti, tu experiencia y por qué te gustaría trabajar en Canadá..."
+                placeholder={t("candidates.form.additional.coverLetterPlaceholder")}
                 rows={5}
               />
             </div>
@@ -570,29 +588,29 @@ const CandidateApplicationForm = () => {
           <div className="space-y-4 border-t pt-6">
             <div className="flex items-center gap-2 mb-4">
               <Shield className="h-5 w-5 text-primary" />
-              <h3 className="text-xl font-semibold text-foreground">Verificación de Seguridad</h3>
+              <h3 className="text-xl font-semibold text-foreground">{t("candidates.form.security.title")}</h3>
             </div>
 
             {/* CAPTCHA */}
             <div className="space-y-2">
-              <Label htmlFor="captcha">Verificación: ¿Cuánto es {captchaNum1} + {captchaNum2}? *</Label>
+              <Label htmlFor="captcha">{t("candidates.form.security.captcha").replace("{num1}", captchaNum1.toString()).replace("{num2}", captchaNum2.toString())}</Label>
               <Input
                 id="captcha"
                 type="text"
                 value={captchaAnswer}
                 onChange={(e) => setCaptchaAnswer(e.target.value)}
-                placeholder="Ingresa el resultado"
+                placeholder={t("candidates.form.security.captchaPlaceholder")}
                 required
                 className="max-w-xs"
               />
               <p className="text-sm text-muted-foreground">
-                Esta verificación nos ayuda a prevenir envíos automáticos.
+                {t("candidates.form.security.disclaimer")}
               </p>
             </div>
 
             {/* Honeypot field (hidden from users but visible to bots) */}
             <div className="hidden">
-              <Label htmlFor="website">Website (leave blank)</Label>
+              <Label htmlFor="website">{t("candidates.form.security.honeypot")}</Label>
               <Input
                 id="website"
                 name="website"
@@ -605,19 +623,19 @@ const CandidateApplicationForm = () => {
             </div>
           </div>
 
-          <Button 
-            type="submit" 
-            size="lg" 
+          <Button
+            type="submit"
+            size="lg"
             className="w-full text-lg"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
               <>
                 <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Enviando...
+                {t("candidates.form.submit.submitting")}
               </>
             ) : (
-              "Enviar Aplicación"
+              t("candidates.form.submit.idle")
             )}
           </Button>
         </form>
