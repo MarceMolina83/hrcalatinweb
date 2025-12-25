@@ -316,8 +316,8 @@ export const translations = {
 
     "employers.why.title": "International Talent Solutions",
     "employers.why.subtitle": "We eliminate cross-border hiring barriers so you can focus on growing.",
-    "employers.why.talent.title": "Validated Talent",
-    "employers.why.talent.description": "Only verified profiles. Skills and language level guaranteed to comply with Canadian regulations.",
+    "employers.why.talent.title": "Verified Talent",
+    "employers.why.talent.description": "We certify candidate backgrounds. We perform thorough verification of previous employment to ensure technical skills and language levels strictly comply with Canadian immigration and labor regulations.",
     "employers.why.matching.title": "Custom Match",
     "employers.why.matching.description": "Candidates who not only fill a vacancy, but align with your industry's vision and technical needs.",
     "employers.why.integration.title": "Rapid Adaptation",
@@ -678,8 +678,8 @@ export const translations = {
 
     "employers.why.title": "Soluciones de Talento Internacional",
     "employers.why.subtitle": "Eliminamos las barreras de la contratación transfronteriza para que usted se enfoque en crecer.",
-    "employers.why.talent.title": "Talento Validado",
-    "employers.why.talent.description": "Solo perfiles verificados. Habilidades y nivel de idioma garantizados para cumplir con la normativa de Canadá.",
+    "employers.why.talent.title": "Talento Verificado",
+    "employers.why.talent.description": "Certificamos la trayectoria de los candidatos. Realizamos una verificación exhaustiva de empleos anteriores para garantizar que las habilidades técnicas y el nivel de idioma del talento elegido cumplan estrictamente con las normativas migratorias y laborales de Canadá.",
     "employers.why.matching.title": "Match a Medida",
     "employers.why.matching.description": "Candidatos que no solo llenan una vacante, sino que se alinean con la visión y necesidades técnicas de su industria.",
     "employers.why.integration.title": "Adaptación Rápida",
