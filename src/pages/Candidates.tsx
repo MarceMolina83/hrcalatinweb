@@ -114,8 +114,8 @@ const Candidates = () => {
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-secondary to-secondary/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
                   <span className="text-3xl">💬</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-secondary">{t("candidates.training.language.title")}</h3>
-                <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                <h3 className="text-2xl font-extrabold mb-2 text-secondary">{t("candidates.training.language.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-6 flex-grow font-semibold">
                   {t("candidates.training.language.description")}
                 </p>
                 <Button variant="outline" className="w-full mt-auto text-secondary border-secondary/50 hover:bg-secondary hover:text-white">
@@ -129,8 +129,8 @@ const Candidates = () => {
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
                   <span className="text-3xl">📄</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-primary">{t("candidates.training.resume.title")}</h3>
-                <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                <h3 className="text-2xl font-extrabold mb-2 text-primary">{t("candidates.training.resume.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-6 flex-grow font-semibold">
                   {t("candidates.training.resume.description")}
                 </p>
                 <Button variant="outline" className="w-full mt-auto text-primary border-primary/50 hover:bg-primary hover:text-white">
@@ -144,8 +144,8 @@ const Candidates = () => {
                 <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-smooth">
                   <MapPin className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-accent">{t("candidates.training.arrival.title")}</h3>
-                <p className="text-muted-foreground text-sm mb-6 flex-grow">
+                <h3 className="text-2xl font-extrabold mb-2 text-accent">{t("candidates.training.arrival.title")}</h3>
+                <p className="text-muted-foreground text-sm mb-6 flex-grow font-semibold">
                   {t("candidates.training.arrival.description")}
                 </p>
                 <Button variant="outline" className="w-full mt-auto text-accent border-accent/50 hover:bg-accent hover:text-white">
