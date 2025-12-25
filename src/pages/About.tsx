@@ -13,11 +13,11 @@ const About = () => {
 
       <div className="pt-20">
         {/* Hero Section */}
-        <section className="py-24 bg-primary text-primary-foreground">
+        <section className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">{t("about.hero.title")}</h1>
-              <p className="text-xl text-primary-foreground/90">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">{t("about.hero.title")}</h1>
+              <p className="text-xl text-muted-foreground">
                 {t("about.hero.subtitle")}
               </p>
             </div>
@@ -84,7 +84,7 @@ const About = () => {
 
 
         {/* Why We're Different */}
-        <section className="py-20 bg-secondary/30">
+        <section className="py-20 bg-gradient-to-br from-primary/5 to-gold/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">{t("about.different.title")}</h2>

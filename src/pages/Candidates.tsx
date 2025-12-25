@@ -32,7 +32,7 @@ const Candidates = () => {
               {t("candidates.hero.subtitle")}
             </p>
             <Button size="lg" variant="secondary" className="text-lg" asChild>
-              <Link to="/get-started">{t("candidates.hero.button")}</Link>
+              <a href="/#get-started">{t("candidates.hero.button")}</a>
             </Button>
           </div>
         </div>

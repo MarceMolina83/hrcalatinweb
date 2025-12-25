@@ -10,14 +10,14 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Employers = () => {
   const { t } = useLanguage();
-  
+
   return (
     <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-20 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${employersImage})` }}
         ></div>
@@ -30,9 +30,14 @@ const Employers = () => {
             <p className="text-xl md:text-2xl mb-8 text-foreground/80">
               {t("employers.hero.subtitle")}
             </p>
-            <Button size="lg" variant="secondary" className="text-lg" asChild>
-              <Link to="/get-started">{t("employers.hero.button")}</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg shadow-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-white transition-smooth" asChild>
+                <a href="/#get-started">{t("employers.cta.register")}</a>
+              </Button>
+              <Button size="lg" className="text-lg shadow-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-white transition-smooth" asChild>
+                <Link to="/contact">{t("employers.cta.consultation")}</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -306,29 +311,6 @@ const Employers = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary/10">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto border-2 border-primary/20 overflow-hidden">
-            <div className="bg-primary/10 p-12 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                {t("employers.cta.title")}
-              </h2>
-              <p className="text-xl mb-8 text-foreground/80">
-                {t("employers.cta.subtitle")}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <Link to="/get-started">{t("employers.cta.register")}</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">{t("employers.cta.consultation")}</Link>
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
 
       <Footer />
     </div>

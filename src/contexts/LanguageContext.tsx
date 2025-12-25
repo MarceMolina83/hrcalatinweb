@@ -18,6 +18,7 @@ export const translations = {
     "nav.candidates": "For Candidates",
     "nav.contact": "Contact Us",
     "nav.getStarted": "Get Started",
+    "nav.about": "About Us",
 
     // Home Page
     "home.hero.title1": "Connecting Talent,",
@@ -256,6 +257,7 @@ export const translations = {
     "nav.candidates": "Para Candidatos",
     "nav.contact": "Contáctanos",
     "nav.getStarted": "Comenzar",
+    "nav.about": "Sobre Nosotros",
 
     // Home Page
     "home.hero.title1": "Conectando Talento,",
@@ -490,10 +492,7 @@ export const translations = {
 };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem("language");
-    return (saved as Language) || "en";
-  });
+  const [language, setLanguage] = useState<Language>("en");
 
   useEffect(() => {
     localStorage.setItem("language", language);
