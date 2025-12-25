@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Search, Users, CheckCircle, Target, TrendingUp, Award, BarChart, Globe } from "lucide-react";
+import { Search, Users, CheckCircle, Award, BarChart, Globe, UserCheck, TrendingUp } from "lucide-react";
 import employersImage from "@/assets/employers-section.jpg";
 import logo from "@/assets/logo.jpeg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -56,10 +56,10 @@ const Employers = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-primary-foreground" />
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <UserCheck className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle>{t("employers.why.talent.title")}</CardTitle>
               </CardHeader>
@@ -70,52 +70,10 @@ const Employers = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <Target className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <CardTitle>{t("employers.why.matching.title")}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  {t("employers.why.matching.description")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <CardTitle>{t("employers.why.integration.title")}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  {t("employers.why.integration.description")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <CardTitle>{t("employers.why.compliance.title")}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  {t("employers.why.compliance.description")}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <BarChart className="h-6 w-6 text-primary-foreground" />
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <BarChart className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle>{t("employers.why.cost.title")}</CardTitle>
               </CardHeader>
@@ -126,10 +84,10 @@ const Employers = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <TrendingUp className="h-6 w-6 text-primary-foreground" />
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-smooth">
+                  <Award className="h-10 w-10 text-white" />
                 </div>
                 <CardTitle>{t("employers.why.partnership.title")}</CardTitle>
               </CardHeader>
