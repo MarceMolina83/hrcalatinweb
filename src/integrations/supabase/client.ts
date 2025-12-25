@@ -6,9 +6,6 @@ const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 // Validate environment variables
-// Temporarily disabled to allow site to load without Supabase
-// TODO: Re-enable after adding environment variables to Vercel
-/*
 if (!SUPABASE_URL) {
   throw new Error(
     'Missing environment variable: VITE_SUPABASE_URL. Please check your .env file or Vercel environment variables.'
@@ -20,46 +17,14 @@ if (!SUPABASE_PUBLISHABLE_KEY) {
     'Missing environment variable: VITE_SUPABASE_PUBLISHABLE_KEY. Please check your .env file or Vercel environment variables.'
   );
 }
-*/
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-const isValidConfig = SUPABASE_URL && SUPABASE_PUBLISHABLE_KEY;
-
-// Temporary mock for testing when env vars are missing
-const mockSupabase = {
-  from: () => ({
-    select: () => ({
-      eq: () => ({
-        single: () => Promise.resolve({ data: null, error: null }),
-        maybeSingle: () => Promise.resolve({ data: null, error: null }),
-      }),
-      order: () => Promise.resolve({ data: [], error: null }),
-    }),
-    insert: () => Promise.resolve({ data: null, error: null }),
-    upload: () => Promise.resolve({ data: null, error: null }),
-  }),
-  storage: {
-    from: () => ({
-      upload: () => Promise.resolve({ data: null, error: null }),
-      getPublicUrl: () => ({ data: { publicUrl: "" } }),
-    }),
-  },
+export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
   auth: {
-    onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => { } } } }),
-    getSession: () => Promise.resolve({ data: { session: null }, error: null }),
-    signInWithPassword: () => Promise.resolve({ data: { user: null, session: null }, error: null }),
-    signOut: () => Promise.resolve({ error: null }),
-  },
-} as unknown as ReturnType<typeof createClient<Database>>;
-
-export const supabase = isValidConfig
-  ? createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-    auth: {
-      storage: localStorage,
-      persistSession: true,
-      autoRefreshToken: true,
-    }
-  })
-  : mockSupabase;
+    storage: localStorage,
+    persistSession: true,
+    autoRefreshToken: true,
+  }
+});

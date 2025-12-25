@@ -10,14 +10,14 @@ import logo from "@/assets/logo.jpeg";
 
 const Index = () => {
   const { t } = useLanguage();
-  
+
   return (
     <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative pt-20 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         ></div>
@@ -71,47 +71,119 @@ const Index = () => {
             <p className="text-xl text-muted-foreground">{t("home.why.subtitle")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <Sparkles className="h-6 w-6 text-primary-foreground" />
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
+              <CardHeader className="text-center">
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-smooth shadow-lg">
+                  <Sparkles className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("home.why.expertise.title")}</CardTitle>
+                <CardTitle className="text-2xl">{t("home.why.expertise.title")}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-center">
                 <p className="text-muted-foreground">
                   {t("home.why.expertise.description")}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-primary-foreground" />
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
+              <CardHeader className="text-center">
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-gold to-gold/60 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-smooth shadow-lg">
+                  <Heart className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("home.why.quality.title")}</CardTitle>
+                <CardTitle className="text-2xl">{t("home.why.quality.title")}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-center">
                 <p className="text-muted-foreground">
                   {t("home.why.quality.description")}
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:shadow-elegant transition-smooth">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-hero flex items-center justify-center mb-4">
-                  <Rocket className="h-6 w-6 text-primary-foreground" />
+            <Card className="border-2 hover:shadow-elegant transition-smooth group">
+              <CardHeader className="text-center">
+                <div className="h-20 w-20 rounded-2xl bg-gradient-to-br from-accent to-accent/60 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-smooth shadow-lg">
+                  <Rocket className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle>{t("home.why.support.title")}</CardTitle>
+                <CardTitle className="text-2xl">{t("home.why.support.title")}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="text-center">
                 <p className="text-muted-foreground">
                   {t("home.why.support.description")}
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Pathways Section - Moved to appear after Why Choose */}
+      <section className="py-20 bg-gradient-to-br from-primary/15 to-accent/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+              <span className="text-accent">{t("home.pathways.title")}</span>{t("home.pathways.titleHighlight")}
+            </h2>
+            <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+              {t("home.pathways.subtitle")}
+            </p>
+
+            <div className="space-y-8">
+              {/* Working Holiday Programs */}
+              <Card className="border-2 border-gold/30 hover:border-gold transition-smooth">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="h-12 w-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🌍</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-gold">{t("home.pathways.holiday.title")}</h3>
+                      <p className="text-muted-foreground">
+                        {t("home.pathways.holiday.description")}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Free Trade Agreements */}
+              <Card className="border-2 border-accent/30 hover:border-accent transition-smooth">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="h-12 w-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🤝</span>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold mb-3 text-accent">{t("home.pathways.fta.title")}</h3>
+                      <p className="text-muted-foreground mb-4">
+                        {t("home.pathways.fta.description")}
+                      </p>
+                      <div className="bg-accent/10 p-4 rounded-lg">
+                        <p className="text-sm text-muted-foreground">
+                          {t("home.pathways.fta.engineering")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* SAWP */}
+              <Card className="border-2 border-primary/30 hover:border-primary transition-smooth">
+                <CardContent className="pt-6">
+                  <div className="flex items-start gap-4">
+                    <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🌾</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-3 text-primary">{t("home.pathways.sawp.title")}</h3>
+                      <p className="text-muted-foreground">
+                        {t("home.pathways.sawp.description")}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -193,78 +265,6 @@ const Index = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Legal Pathways Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/15 to-accent/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-              <span className="text-accent">{t("home.pathways.title")}</span>{t("home.pathways.titleHighlight")}
-            </h2>
-            <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              {t("home.pathways.subtitle")}
-            </p>
-            
-            <div className="space-y-8">
-              {/* Working Holiday Programs */}
-              <Card className="border-2 border-gold/30 hover:border-gold transition-smooth">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🌍</span>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-gold">{t("home.pathways.holiday.title")}</h3>
-                      <p className="text-muted-foreground">
-                        {t("home.pathways.holiday.description")}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Free Trade Agreements */}
-              <Card className="border-2 border-accent/30 hover:border-accent transition-smooth">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🤝</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-3 text-accent">{t("home.pathways.fta.title")}</h3>
-                      <p className="text-muted-foreground mb-4">
-                        {t("home.pathways.fta.description")}
-                      </p>
-                      <div className="bg-accent/10 p-4 rounded-lg">
-                        <p className="text-sm text-muted-foreground">
-                          {t("home.pathways.fta.engineering")}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* SAWP */}
-              <Card className="border-2 border-primary/30 hover:border-primary transition-smooth">
-                <CardContent className="pt-6">
-                  <div className="flex items-start gap-4">
-                    <div className="h-12 w-12 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🌾</span>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold mb-3 text-primary">{t("home.pathways.sawp.title")}</h3>
-                      <p className="text-muted-foreground">
-                        {t("home.pathways.sawp.description")}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </div>
       </section>
