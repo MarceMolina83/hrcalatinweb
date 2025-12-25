@@ -125,7 +125,7 @@ const Employers = () => {
                     <CardTitle className="text-2xl mb-2 font-extrabold text-secondary tracking-tight">
                       {t("employers.services.training.title")}
                     </CardTitle>
-                    <CardDescription className="font-semibold text-muted-foreground leading-relaxed">
+                    <CardDescription className="font-bold text-muted-foreground leading-relaxed">
                       {t("employers.services.training.description")}
                     </CardDescription>
                   </div>
@@ -143,7 +143,7 @@ const Employers = () => {
                     <CardTitle className="text-2xl mb-2 font-extrabold text-secondary tracking-tight">
                       {t("employers.services.onboarding.title")}
                     </CardTitle>
-                    <CardDescription className="font-semibold text-muted-foreground leading-relaxed">
+                    <CardDescription className="font-bold text-muted-foreground leading-relaxed">
                       {t("employers.services.onboarding.description")}
                     </CardDescription>
                   </div>
