@@ -27,7 +27,7 @@ const Index = () => {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-foreground">
               {t("home.hero.title1")}<br />{t("home.hero.title2")}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-foreground/80 animate-fade-in">
+            <p className="text-xl md:text-2xl mb-8 text-foreground/80 animate-fade-in font-bold">
               {t("home.hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
@@ -54,7 +54,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               {t("home.mission.title")} <span className="text-accent">{t("home.mission.titleHighlight")}</span>
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed font-bold">
               {t("home.mission.description")}
             </p>
           </div>
@@ -68,7 +68,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               {t("home.why.title")} <span className="text-gold">{t("home.why.titleHighlight")}</span>?
             </h2>
-            <p className="text-xl text-muted-foreground">{t("home.why.subtitle")}</p>
+            <p className="text-xl text-muted-foreground font-bold">{t("home.why.subtitle")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="border-2 hover:shadow-elegant transition-smooth group">
@@ -79,7 +79,7 @@ const Index = () => {
                 <CardTitle className="text-2xl">{t("home.why.expertise.title")}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-bold">
                   {t("home.why.expertise.description")}
                 </p>
               </CardContent>
@@ -93,7 +93,7 @@ const Index = () => {
                 <CardTitle className="text-2xl">{t("home.why.quality.title")}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-bold">
                   {t("home.why.quality.description")}
                 </p>
               </CardContent>
@@ -107,7 +107,7 @@ const Index = () => {
                 <CardTitle className="text-2xl">{t("home.why.support.title")}</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-bold">
                   {t("home.why.support.description")}
                 </p>
               </CardContent>
@@ -123,7 +123,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
               <span className="text-accent">{t("home.pathways.title")}</span>{t("home.pathways.titleHighlight")}
             </h2>
-            <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-center text-muted-foreground mb-12 max-w-3xl mx-auto font-bold">
               {t("home.pathways.subtitle")}
             </p>
 
@@ -137,7 +137,7 @@ const Index = () => {
                     </div>
                     <div className="text-center md:text-left">
                       <h3 className="text-2xl font-bold mb-3 text-gold">{t("home.pathways.holiday.title")}</h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground font-bold">
                         {t("home.pathways.holiday.description")}
                       </p>
                     </div>
@@ -154,7 +154,7 @@ const Index = () => {
                     </div>
                     <div className="flex-1 text-center md:text-left">
                       <h3 className="text-2xl font-bold mb-3 text-accent">{t("home.pathways.fta.title")}</h3>
-                      <p className="text-muted-foreground mb-4">
+                      <p className="text-muted-foreground mb-4 font-bold">
                         {t("home.pathways.fta.description")}
                       </p>
                     </div>
@@ -171,7 +171,7 @@ const Index = () => {
                     </div>
                     <div className="text-center md:text-left">
                       <h3 className="text-2xl font-bold mb-3 text-primary">{t("home.pathways.sawp.title")}</h3>
-                      <p className="text-muted-foreground">
+                      <p className="text-muted-foreground font-bold">
                         {t("home.pathways.sawp.description")}
                       </p>
                     </div>
@@ -189,7 +189,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">{t("getStarted.hero.title")}</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-bold">
               {t("getStarted.hero.subtitle")}
             </p>
           </div>
@@ -206,10 +206,10 @@ const Index = () => {
                 <CardTitle className="text-3xl">{t("getStarted.employer.title")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-bold">
                   {t("getStarted.employer.subtitle")}
                 </p>
-                <div className="space-y-3 text-muted-foreground">
+                <div className="space-y-3 text-muted-foreground font-bold">
                   <p className="flex items-start gap-2">
                     <span className="text-gold mt-1">✓</span>
                     {t("getStarted.employer.item1")}
@@ -247,10 +247,10 @@ const Index = () => {
                 <CardTitle className="text-3xl">{t("getStarted.candidate.title")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground font-bold">
                   {t("getStarted.candidate.subtitle")}
                 </p>
-                <div className="space-y-3 text-muted-foreground">
+                <div className="space-y-3 text-muted-foreground font-bold">
                   <p className="flex items-start gap-2">
                     <span className="text-gold mt-1">✓</span>
                     {t("getStarted.candidate.item1")}
@@ -286,7 +286,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {t("getStarted.help.title1")} <span className="text-accent">{t("getStarted.help.title2")}</span>?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-8 font-bold">
               {t("getStarted.help.subtitle")}
             </p>
             <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-accent hover:text-white transition-smooth shadow-lg" asChild>

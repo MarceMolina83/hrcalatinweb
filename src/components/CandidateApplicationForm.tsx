@@ -481,7 +481,7 @@ const CandidateApplicationForm = () => {
                 type="url"
                 value={formData.linkedin_url}
                 onChange={handleInputChange}
-                placeholder={t("candidates.form.professional.linkedinPlaceholder")}
+                placeholder="https://www.linkedin.com/company/hr-calatin/"
               />
             </div>
           </div>

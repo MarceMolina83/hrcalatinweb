@@ -423,7 +423,7 @@ export const translations = {
     "home.pathways.holiday.title": "Talento Joven (Working Holiday)",
     "home.pathways.holiday.description": "Fuerza Laboral Joven y Flexible. Programas ágiles para talento de Chile y Costa Rica. Una solución perfecta para cubrir necesidades temporales o periodos de prueba que pueden evolucionar a posiciones permanentes.",
     "home.pathways.fta.title": "Tratados de Libre Comercio: Talento sin Fronteras",
-    "home.pathways.fta.description": "Aprovechamos los acuerdos con Colombia, Panamá, Perú, Chile y México para garantizar la entrada rápida de expertos de posiciones de alta demanda a Canadá.",
+    "home.pathways.fta.description": "Aprovechamos los tratados de libre comercio con Colombia, Panamá, Perú, Chile y México para agilizar la entrada de expertos sin complicaciones. Ideal para sectores como Ingeniería, Tecnología, Salud y Educación.",
     "home.pathways.fta.engineering": "Enfoque: Velocidad y Profesionales Calificados (Colombia, Panamá, etc.)",
     "home.pathways.fta.engineeringDesc": "",
     "home.pathways.fta.healthcare": "",
