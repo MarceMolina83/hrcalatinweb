@@ -11,7 +11,7 @@ const Contact = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      <div className="pt-20">
+      <main className="pt-20 font-bold">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-primary/10 to-accent/10">
           <div className="container mx-auto px-4">
@@ -138,7 +138,7 @@ const Contact = () => {
             </div>
           </div>
         </section>
-      </div>
+      </main>
 
       <Footer />
     </div>
