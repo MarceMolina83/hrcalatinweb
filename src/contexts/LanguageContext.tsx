@@ -19,6 +19,7 @@ export const translations = {
     "nav.contact": "Contact Us",
     "nav.getStarted": "Get Started",
     "nav.about": "About Us",
+    "common.comingSoon": "Coming soon",
 
     // Home Page
     "home.hero.title1": "Connecting Talent,",
@@ -372,6 +373,17 @@ export const translations = {
     "contact.connect.employers.description": "Interested in accessing our talent pool or learning more about our services?",
     "contact.connect.candidates.title": "For Candidates",
     "contact.connect.candidates.description": "Ready to start your Canadian career journey? Need help with your application?",
+    "contact.form.title": "Send us a Message",
+    "contact.form.name": "Full Name",
+    "contact.form.email": "Email Address",
+    "contact.form.subject": "Subject",
+    "contact.form.message": "Message",
+    "contact.form.submit": "Send Message",
+    "contact.form.submitting": "Sending...",
+    "contact.form.success.title": "Message Sent!",
+    "contact.form.success.message": "Thank you for reaching out. We will get back to you soon.",
+    "contact.form.error.title": "Error",
+    "contact.form.error.message": "There was an error sending your message. Please try again.",
   },
   es: {
     // Navigation
@@ -381,6 +393,7 @@ export const translations = {
     "nav.contact": "Contáctanos",
     "nav.getStarted": "Comenzar",
     "nav.about": "Sobre Nosotros",
+    "common.comingSoon": "Próximamente",
 
     // Home Page
     "home.hero.title1": "Conectando Talento,",
@@ -734,6 +747,17 @@ export const translations = {
     "contact.connect.employers.description": "¿Interesado en acceder a nuestro pool de talento o conocer más sobre nuestros servicios?",
     "contact.connect.candidates.title": "Para Candidatos",
     "contact.connect.candidates.description": "¿Listo para comenzar tu carrera canadiense? ¿Necesitas ayuda con tu aplicación?",
+    "contact.form.title": "Envíanos un Mensaje",
+    "contact.form.name": "Nombre Completo",
+    "contact.form.email": "Correo Electrónico",
+    "contact.form.subject": "Asunto",
+    "contact.form.message": "Mensaje",
+    "contact.form.submit": "Enviar Mensaje",
+    "contact.form.submitting": "Enviando...",
+    "contact.form.success.title": "¡Mensaje Enviado!",
+    "contact.form.success.message": "Gracias por contactarnos. Te responderemos pronto.",
+    "contact.form.error.title": "Error",
+    "contact.form.error.message": "Hubo un error al enviar tu mensaje. Por favor intenta de nuevo.",
   }
 };
 

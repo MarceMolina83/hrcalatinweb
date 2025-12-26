@@ -1,11 +1,26 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#lets-connect") {
+      const element = document.getElementById("lets-connect");
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen">
@@ -51,8 +66,8 @@ const Contact = () => {
                   <CardTitle>{t("contact.email.title")}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <a href="mailto:info@hrcalatin.com" className="text-primary hover:underline">
-                    info@hrcalatin.com
+                  <a href="#" className="text-primary hover:underline italic">
+                    {t("common.comingSoon")}
                   </a>
                 </CardContent>
               </Card>
@@ -65,8 +80,8 @@ const Contact = () => {
                   <CardTitle>{t("contact.phone.title")}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <a href="tel:+14165550101" className="text-primary hover:underline">
-                    +1 (416) 555-0101
+                  <a href="#" className="text-primary hover:underline italic">
+                    {t("common.comingSoon")}
                   </a>
                 </CardContent>
               </Card>
@@ -89,15 +104,19 @@ const Contact = () => {
           </div>
         </section>
 
+
         {/* Contact Info Section */}
-        <section className="py-20 bg-gradient-to-br from-accent/10 to-primary/10">
+        <section id="lets-connect" className="py-20 bg-gradient-to-br from-accent/10 to-primary/10 border-t">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">{t("contact.connect.title")}</h2>
-                <p className="text-xl text-muted-foreground">
+                <p className="text-xl text-muted-foreground mb-12">
                   {t("contact.connect.subtitle")}
                 </p>
+                <div className="max-w-3xl mx-auto mb-16">
+                  <ContactForm />
+                </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -111,8 +130,8 @@ const Contact = () => {
                     </p>
                     <div className="space-y-2">
                       <p className="font-medium">Email:</p>
-                      <a href="mailto:employers@hrcalatin.com" className="text-primary hover:underline">
-                        employers@hrcalatin.com
+                      <a href="#" className="text-primary hover:underline italic">
+                        {t("common.comingSoon")}
                       </a>
                     </div>
                   </CardContent>
@@ -128,8 +147,8 @@ const Contact = () => {
                     </p>
                     <div className="space-y-2">
                       <p className="font-medium">Email:</p>
-                      <a href="mailto:candidates@hrcalatin.com" className="text-primary hover:underline">
-                        candidates@hrcalatin.com
+                      <a href="#" className="text-primary hover:underline italic">
+                        {t("common.comingSoon")}
                       </a>
                     </div>
                   </CardContent>

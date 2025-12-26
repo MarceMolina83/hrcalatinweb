@@ -65,7 +65,7 @@ const Navigation = () => {
                   </Button>
                   <div className="h-px bg-border my-1"></div>
                   <Button size="sm" className="w-full justify-start gradient-hero hover:bg-accent hover:text-white transition-smooth" asChild>
-                    <Link to="/contact">{t("nav.contact")}</Link>
+                    <Link to="/contact#lets-connect">{t("nav.contact")}</Link>
                   </Button>
                   <Button size="sm" className="w-full justify-start gradient-hero hover:bg-accent hover:text-white transition-smooth" asChild>
                     <a href="/#get-started">{t("nav.getStarted")}</a>
@@ -113,7 +113,7 @@ const Navigation = () => {
                   <LanguageSwitcher />
                 </div>
                 <Button variant="outline" size="lg" asChild>
-                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>{t("nav.contact")}</Link>
+                  <Link to="/contact#lets-connect" onClick={() => setIsMenuOpen(false)}>{t("nav.contact")}</Link>
                 </Button>
                 <Button size="lg" className="gradient-hero" asChild>
                   <a href="/#get-started" onClick={() => setIsMenuOpen(false)}>{t("nav.getStarted")}</a>

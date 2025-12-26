@@ -117,8 +117,8 @@ const Candidates = () => {
                   <p className="text-muted-foreground text-sm mb-6 flex-grow font-semibold">
                     {t("candidates.training.language.description")}
                   </p>
-                  <Button variant="outline" className="w-full mt-auto text-secondary border-secondary/50 hover:bg-secondary hover:text-white">
-                    {t("candidates.training.button")}
+                  <Button variant="outline" className="w-full mt-auto text-secondary border-secondary/50 hover:bg-secondary hover:text-white" asChild>
+                    <Link to="/contact#lets-connect">{t("candidates.training.button")}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -132,8 +132,8 @@ const Candidates = () => {
                   <p className="text-muted-foreground text-sm mb-6 flex-grow font-semibold">
                     {t("candidates.training.resume.description")}
                   </p>
-                  <Button variant="outline" className="w-full mt-auto text-primary border-primary/50 hover:bg-primary hover:text-white">
-                    {t("candidates.training.button")}
+                  <Button variant="outline" className="w-full mt-auto text-primary border-primary/50 hover:bg-primary hover:text-white" asChild>
+                    <Link to="/contact#lets-connect">{t("candidates.training.button")}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -147,8 +147,8 @@ const Candidates = () => {
                   <p className="text-muted-foreground text-sm mb-6 flex-grow font-semibold">
                     {t("candidates.training.arrival.description")}
                   </p>
-                  <Button variant="outline" className="w-full mt-auto text-accent border-accent/50 hover:bg-accent hover:text-white">
-                    {t("candidates.training.button")}
+                  <Button variant="outline" className="w-full mt-auto text-accent border-accent/50 hover:bg-accent hover:text-white" asChild>
+                    <Link to="/contact#lets-connect">{t("candidates.training.button")}</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -185,7 +185,7 @@ const Candidates = () => {
                   {t("candidates.cta.subtitle")}
                 </p>
                 <Button size="lg" variant="secondary" asChild>
-                  <Link to="/contact">{t("candidates.cta.button")}</Link>
+                  <Link to="/contact#lets-connect">{t("candidates.cta.button")}</Link>
                 </Button>
               </div>
             </Card>

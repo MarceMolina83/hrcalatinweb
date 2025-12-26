@@ -9,6 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Upload, CheckCircle, Loader2, Shield } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import emailjs from "@emailjs/browser";
 
 const latinAmericanCountries = [
   { id: "argentina", key: "candidates.form.country.argentina" },
@@ -268,6 +269,43 @@ const CandidateApplicationForm = () => {
       if (insertError) {
         console.error("Insert error:", insertError);
         throw new Error("Error al enviar la aplicación");
+      }
+
+      // Send email notification via EmailJS
+      try {
+        await emailjs.send(
+          "service_9ydzq89",
+          "template_0b7bypg",
+          {
+            name: formData.full_name,
+            emailfrom: formData.email,
+            email_from: formData.email,
+            user_email: formData.email,
+            email: formData.email,
+            reply_to: formData.email,
+            subject: `New Candidate Application: ${formData.full_name}`,
+            message: `
+              (Email from: ${formData.email})
+              
+              New candidate application received!
+              
+              Name: ${formData.full_name}
+              Email: ${formData.email}
+              Phone: ${formData.phone || 'N/A'}
+              Country: ${formData.country}
+              Profession: ${formData.profession}
+              Experience: ${formData.years_experience} years
+              Sector: ${formData.preferred_sector}
+              
+              View details in your dashboard.
+            `,
+            time: new Date().toLocaleString(),
+          },
+          "R4cLIajWE60QUQOoX"
+        );
+      } catch (emailError) {
+        console.error("Email notification failed:", emailError);
+        // We don't throw here to avoid showing an error to the user if only the email notification fails but data was saved
       }
 
       setIsSuccess(true);

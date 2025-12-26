@@ -35,7 +35,7 @@ const Employers = () => {
                   <a href="/#get-started">{t("employers.cta.register")}</a>
                 </Button>
                 <Button size="lg" className="text-lg shadow-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-white transition-smooth font-bold" asChild>
-                  <Link to="/contact">{t("employers.cta.consultation")}</Link>
+                  <Link to="/contact#lets-connect">{t("employers.cta.consultation")}</Link>
                 </Button>
               </div>
             </div>

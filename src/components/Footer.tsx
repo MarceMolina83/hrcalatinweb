@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, Linkedin, Facebook, Twitter } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
@@ -52,6 +54,11 @@ const Footer = () => {
                   About Us
                 </Link>
               </li>
+              <li>
+                <Link to="/contact#lets-connect" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -76,14 +83,14 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-5 w-5 text-primary-foreground/70 flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@hrcalatin.com" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth">
-                  info@hrcalatin.com
+                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth italic">
+                  {t("common.comingSoon")}
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="h-5 w-5 text-primary-foreground/70 flex-shrink-0 mt-0.5" />
-                <a href="tel:+14165550101" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth">
-                  +1 (416) 555-0101
+                <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-smooth italic">
+                  {t("common.comingSoon")}
                 </a>
               </li>
             </ul>

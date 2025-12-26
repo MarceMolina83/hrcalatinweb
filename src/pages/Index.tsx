@@ -42,6 +42,11 @@ const Index = () => {
                     {t("home.hero.candidates")} <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
+                <Button size="lg" variant="outline" className="text-lg shadow-xl bg-background/50 hover:bg-accent hover:text-white transition-all duration-300" asChild>
+                  <Link to="/contact#lets-connect">
+                    {t("nav.contact")} <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
